@@ -37,7 +37,7 @@ export default function Contact() {
               <span className="text-gradient">algo relevante.</span>
             </h2>
             <p className="mt-6 text-muted text-lg max-w-xl mx-auto">
-              Aberto a oportunidades como Engenheiro de Software Júnior, projetos
+              Aberto a oportunidades como Desenvolvedor de Software Júnior, projetos
               freelance e colaborações técnicas. Bora trocar uma ideia?
             </p>
 

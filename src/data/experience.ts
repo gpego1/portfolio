@@ -24,10 +24,10 @@ export const experience: ExperienceItem[] = [
     type: "work",
   },
   {
-    period: "Em andamento",
+    period: "Em andamento — previsão 2029",
     title: "Bacharelado em Engenharia de Software",
     place: "CEUNSP",
-    description: "Formação em andamento com foco em arquitetura de software, engenharia e boas práticas de desenvolvimento.",
+    description: "Formação em andamento com foco em arquitetura de software, engenharia e boas práticas de desenvolvimento. Conclusão prevista para 2029.",
     type: "education",
   },
   {

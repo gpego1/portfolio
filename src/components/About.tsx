@@ -26,7 +26,7 @@ export default function About() {
         <SectionHeading
           num="01 — Sobre"
           title="Engenharia de software com raízes autodidatas."
-          description="Sou Gabriel Pego Feitosa, Engenheiro de Software Júnior de Indaiatuba/SP. Gosto de transformar problemas reais em sistemas confiáveis, escaláveis e bem instrumentados."
+          description="Sou Gabriel Pego Feitosa, Desenvolvedor de Software Júnior de Indaiatuba/SP. Gosto de transformar problemas reais em sistemas confiáveis, escaláveis e bem instrumentados."
         />
 
         <div className="grid md:grid-cols-3 gap-5">

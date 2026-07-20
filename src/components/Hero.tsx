@@ -38,7 +38,7 @@ export default function Hero() {
           </h1>
 
           <p className="mt-6 text-lg sm:text-xl text-muted max-w-xl">
-            Engenheiro de Software Júnior. Construo{" "}
+            Desenvolvedor de Software Júnior. Construo{" "}
             <span className="text-ink font-medium">APIs</span>,{" "}
             <span className="text-ink font-medium">microsserviços orientados a eventos</span>{" "}
             e integro <span className="text-ink font-medium">Inteligência Artificial</span> a
@@ -92,7 +92,7 @@ export default function Hero() {
           <div className="relative w-64 sm:w-80 aspect-[4/5] rounded-[2rem] overflow-hidden glow-border">
             <img
               src={profile}
-              alt="Foto de Gabriel Pego, Engenheiro de Software"
+              alt="Foto de Gabriel Pego, Desenvolvedor de Software"
               className="w-full h-full object-cover"
               width={320}
               height={400}
@@ -101,7 +101,7 @@ export default function Hero() {
           </div>
           <div className="absolute -bottom-5 -left-5 sm:-left-8 glass-panel rounded-2xl px-4 py-3 font-mono text-xs text-muted">
             <span className="text-violet-glow">const</span> role ={" "}
-            <span className="text-fuchsia-glow">"SWE Jr"</span>;
+            <span className="text-fuchsia-glow">"Dev Jr"</span>;
           </div>
         </div>
       </div>
