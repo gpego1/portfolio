@@ -25,7 +25,7 @@ export default function About() {
       <div className="max-w-6xl mx-auto px-5 sm:px-8">
         <SectionHeading
           num="01 — Sobre"
-          title="Engenharia de software com raízes autodidatas."
+          title="Desenvolvimento de software com raízes autodidatas."
           description="Sou Gabriel Pego Feitosa, Desenvolvedor de Software Júnior de Indaiatuba/SP. Gosto de transformar problemas reais em sistemas confiáveis, escaláveis e bem instrumentados."
         />
 
