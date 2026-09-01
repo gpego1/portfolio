@@ -8,7 +8,7 @@ export type ExperienceItem = {
 
 export const experience: ExperienceItem[] = [
   {
-    period: "Atual",
+    period: "Anterior",
     title: "Estagiário de TI — Automações, Chatbots e Integrações Web",
     place: "",
     description:
@@ -26,14 +26,14 @@ export const experience: ExperienceItem[] = [
   {
     period: "Em andamento — previsão 2029",
     title: "Bacharelado em Engenharia de Software",
-    place: "CEUNSP",
+    place: "UTFPR - Universidade Tecnológica Federal do Paraná",
     description: "Formação em andamento com foco em arquitetura de software, engenharia e boas práticas de desenvolvimento. Conclusão prevista para 2029.",
     type: "education",
   },
   {
     period: "Concluído",
     title: "Técnico em Informática",
-    place: "FIEC",
+    place: "FIEC - Fundação Indaiatubana de Educação e Cultura",
     description:
       "Formação técnica concluída, com TCC em plataforma de eventos e ingressos (musicApp / Projeto Sonora).",
     type: "education",
