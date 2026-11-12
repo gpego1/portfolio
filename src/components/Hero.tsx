@@ -1,127 +1,32 @@
-import { ArrowDown, Mail } from "lucide-react";
+import { ArrowDown, ArrowRight, Mail } from "lucide-react";
+import { Button, Tag } from "./ui";
 import { GithubIcon, LinkedinIcon } from "./icons/Brand";
 import profile from "../assets/profile.jpg";
 
-const stack = [
-  "Java",
-  "Spring Boot",
-  "TypeScript",
-  "React",
-  "Python",
-  "AWS",
-  "Docker",
-  "Kafka",
-  "PostgreSQL",
-  "Terraform",
-];
+const stack = ["Java", "Python", "AWS", "FastAPI", "Flask", "LangChain", "Ollama", "Kafka", "React"];
 
 export default function Hero() {
-  return (
-    <section
-      id="top"
-      className="relative min-h-dvh flex flex-col justify-center pt-28 pb-16 overflow-hidden"
-    >
-      <div className="absolute inset-0 grid-backdrop pointer-events-none" />
-      <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[640px] h-[640px] rounded-full bg-violet-glow/25 blur-[140px] pointer-events-none" />
-      <div className="absolute top-40 right-0 w-[420px] h-[420px] rounded-full bg-fuchsia-glow/15 blur-[120px] pointer-events-none" />
-
-      <div className="relative max-w-6xl mx-auto w-full px-5 sm:px-8 grid lg:grid-cols-[1.15fr_0.85fr] gap-14 items-center">
-        <div>
-          <div className="inline-flex items-center gap-2 rounded-full glass-panel px-4 py-1.5 text-xs font-mono text-violet-glow mb-8">
-            <span className="w-1.5 h-1.5 rounded-full bg-violet-glow animate-pulse" />
-            disponível para novas oportunidades
-          </div>
-
-          <h1 className="font-display font-bold leading-[0.98] text-[13vw] sm:text-6xl lg:text-7xl tracking-tight">
-            <span className="block text-ink">Gabriel Pego</span>
-            <span className="block text-gradient">Feitosa</span>
-          </h1>
-
-          <p className="mt-6 text-lg sm:text-xl text-muted max-w-xl">
-            Desenvolvedor de Software Júnior. Construo{" "}
-            <span className="text-ink font-medium">APIs</span>,{" "}
-            <span className="text-ink font-medium">microsserviços orientados a eventos</span>{" "}
-            e integro <span className="text-ink font-medium">Inteligência Artificial</span> a
-            produtos reais — do código à nuvem.
-          </p>
-
-          <div className="mt-9 flex flex-wrap items-center gap-4">
-            <a
-              href="#projetos"
-              className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-violet-deep via-violet-glow to-fuchsia-glow px-7 py-3.5 font-semibold text-ink glow-border hover:brightness-110 transition"
-            >
-              Ver projetos
-              <ArrowDown
-                size={16}
-                className="transition-transform group-hover:translate-y-0.5"
-              />
-            </a>
-            <a
-              href="#contato"
-              className="inline-flex items-center gap-2 rounded-full glass-panel px-7 py-3.5 font-semibold text-ink hover:border-violet-glow/60 transition"
-            >
-              <Mail size={16} />
-              Contato
-            </a>
-
-            <div className="flex items-center gap-2 ml-1">
-              <a
-                href="https://github.com/gpego1"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="GitHub de Gabriel Pego"
-                className="p-3 rounded-full glass-panel text-muted hover:text-ink hover:border-violet-glow/60 transition"
-              >
-                <GithubIcon size={18} />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/gabrielpego01"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="LinkedIn de Gabriel Pego"
-                className="p-3 rounded-full glass-panel text-muted hover:text-ink hover:border-violet-glow/60 transition"
-              >
-                <LinkedinIcon size={18} />
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div className="relative mx-auto">
-          <div className="absolute inset-0 scale-110 rounded-[2.5rem] bg-gradient-to-br from-violet-glow/40 to-fuchsia-glow/20 blur-3xl" />
-          <div className="relative w-64 sm:w-80 aspect-[4/5] rounded-[2rem] overflow-hidden glow-border">
-            <img
-              src={profile}
-              alt="Foto de Gabriel Pego, Desenvolvedor de Software"
-              className="w-full h-full object-cover"
-              width={320}
-              height={400}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-bg/80 via-transparent to-transparent" />
-          </div>
-          <div className="absolute -bottom-5 -left-5 sm:-left-8 glass-panel rounded-2xl px-4 py-3 font-mono text-xs text-muted">
-            <span className="text-violet-glow">const</span> role ={" "}
-            <span className="text-fuchsia-glow">"Dev Jr"</span>;
-          </div>
-        </div>
+  return <section id="top" className="hero">
+    <div className="hero-ambient hero-ambient--one" aria-hidden="true" /><div className="hero-ambient hero-ambient--two" aria-hidden="true" />
+    <svg className="hero-wire" viewBox="0 0 640 640" fill="none" aria-hidden="true"><circle cx="320" cy="320" r="250"/><circle cx="320" cy="320" r="184"/><ellipse cx="320" cy="320" rx="285" ry="100" transform="rotate(-28 320 320)"/><ellipse cx="320" cy="320" rx="285" ry="100" transform="rotate(48 320 320)"/><path d="M70 320h500M320 70v500"/><circle className="wire-node" cx="570" cy="320" r="5"/><circle className="wire-node" cx="320" cy="70" r="5"/><circle className="wire-node" cx="141" cy="499" r="5"/></svg>
+    <div className="container hero-layout">
+      <div className="hero-copy reveal">
+        <p className="hero-eyebrow"><span className="status-pulse" />Backend · AWS · AI Agents</p>
+        <p className="hero-availability">Disponível para novas oportunidades <span>↗</span></p>
+        <h1>Gabriel<br /><span>Pego Feitosa</span></h1>
+        <p className="hero-role">Desenvolvedor de software <span>·</span> AI Engineering</p>
+        <p className="hero-intro">Desenvolvedor de Software Júnior com foco em <strong>AI Engineering</strong>. Integro <strong>LLMs, RAG e tool calling</strong> a APIs e automações para criar soluções de IA conectadas a problemas reais.</p>
+        <div className="hero-actions"><Button href="#projetos">Ver projetos <ArrowRight size={17} aria-hidden="true" /></Button><Button href="#contato" variant="secondary"><Mail size={16} aria-hidden="true" /> Contato</Button></div>
+        <div className="hero-socials"><a href="https://github.com/gpego1" target="_blank" rel="noreferrer" aria-label="GitHub de Gabriel Pego"><GithubIcon size={17} /><span>GitHub</span></a><a href="https://www.linkedin.com/in/gabrielpego01" target="_blank" rel="noreferrer" aria-label="LinkedIn de Gabriel Pego"><LinkedinIcon size={17} /><span>LinkedIn</span></a></div>
+        <div className="hero-credentials"><Tag>Oracle Certified · OCI Foundations Associate</Tag><Tag>UTFPR · Engenharia de Software</Tag></div>
       </div>
-
-      <div className="relative mt-20 border-t border-white/5">
-        <div className="max-w-6xl mx-auto px-5 sm:px-8">
-          <div className="flex overflow-hidden mask-fade py-6">
-            <div className="flex gap-10 animate-[marquee_28s_linear_infinite] shrink-0">
-              {[...stack, ...stack].map((tech, i) => (
-                <span
-                  key={i}
-                  className="font-mono text-sm text-faint whitespace-nowrap"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
+      <div className="hero-visual reveal">
+        <div className="portrait-frame"><span className="portrait-corner portrait-corner--tl"/><span className="portrait-corner portrait-corner--br"/><img src={profile} alt="Gabriel Pego, desenvolvedor de software" width={400} height={400} fetchPriority="high" /></div>
+        <div className="portrait-badge portrait-badge--top"><span className="badge-mark">GP</span><span>Engenharia<br />de software</span></div>
+        <div className="portrait-badge portrait-badge--bottom"><span className="badge-label">FOCO ATUAL</span><strong>Sistemas de IA <span>↗</span></strong></div>
+        <div className="portrait-coordinate" aria-hidden="true">PR · BR<br />DOIS VIZINHOS</div>
       </div>
-    </section>
-  );
+    </div>
+    <div className="container hero-bottom"><div className="hero-stack-label"><span>STACK</span><span>01 — 09</span></div><div className="hero-stack-viewport"><div className="hero-stack-track"><div className="hero-stack-list">{stack.map((item) => <span key={item}>{item}</span>)}</div><div className="hero-stack-list" aria-hidden="true">{stack.map((item) => <span key={item}>{item}</span>)}</div></div></div><a href="#sobre" className="scroll-cue"><span>Role para explorar</span><ArrowDown size={15} aria-hidden="true" /></a></div>
+  </section>;
 }

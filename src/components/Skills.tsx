@@ -1,45 +1,20 @@
+import { useState } from "react";
+import { Layers3 } from "lucide-react";
 import SectionHeading from "./SectionHeading";
 import { skillGroups } from "../data/skills";
+import { Tag } from "./ui";
 
-const spanClass: Record<string, string> = {
-  lg: "md:col-span-4",
-  md: "md:col-span-3",
-  sm: "md:col-span-2",
-};
+const categories = ["Tudo", "IA & Automação", "Backend & Arquitetura", "Cloud & DevOps", "Ferramentas"] as const;
+type Category = (typeof categories)[number];
+const matchesCategory = (title: string, category: Category) => category === "Tudo" || title === category || (category === "Backend & Arquitetura" && ["Linguagens", "Banco de Dados"].includes(title)) || (category === "Ferramentas" && ["Frontend", "Testes"].includes(title));
 
 export default function Skills() {
-  return (
-    <section id="skills" className="relative py-28 sm:py-32">
-      <div className="max-w-6xl mx-auto px-5 sm:px-8">
-        <SectionHeading
-          num="02 — Stack"
-          title="Ferramentas que uso no dia a dia."
-          description="Uma stack full-stack orientada a produtos: do backend orientado a eventos até interfaces rápidas, passando por cloud, dados e IA."
-        />
-
-        <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
-          {skillGroups.map((group) => (
-            <div
-              key={group.title}
-              className={`glass-panel rounded-3xl p-6 col-span-2 ${spanClass[group.span]} hover:border-violet-glow/50 transition-colors duration-300`}
-            >
-              <h3 className="font-mono text-xs text-violet-glow uppercase tracking-wider mb-4">
-                {group.title}
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {group.items.map((item) => (
-                  <span
-                    key={item}
-                    className="text-sm text-ink/90 bg-white/[0.04] border border-white/5 rounded-lg px-3 py-1.5"
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+  const [category, setCategory] = useState<Category>("Tudo");
+  const visibleGroups = skillGroups.filter((group) => matchesCategory(group.title, category));
+  return <section id="skills" className="section section-skills"><div className="container">
+    <SectionHeading num="02 — Stack" title="A stack por trás das aplicações com IA." description="Modelos, frameworks e serviços que uso para integrar LLMs, criar agentes e RAG, automatizar fluxos e sustentar aplicações via APIs e infraestrutura cloud." />
+    <div className="skills-intro"><div className="skills-glyph"><Layers3 size={23} aria-hidden="true" /></div><span className="skills-count">{skillGroups.reduce((total, group) => total + group.items.length, 0)} tecnologias</span></div>
+    <div className="skill-filters" role="group" aria-label="Filtrar tecnologias">{categories.map((item) => <button key={item} type="button" className={`skill-filter${category === item ? " is-active" : ""}`} aria-pressed={category === item} onClick={() => setCategory(item)}>{item}</button>)}</div>
+    <div className="skills-grid" aria-live="polite">{visibleGroups.map((group, index) => <article className="skill-group" key={group.title} style={{ animationDelay: `${index * 70}ms` }}><h3><span>{String(index + 1).padStart(2, "0")}</span>{group.title}</h3><div className="skill-tags">{group.items.map((item) => <Tag key={item}>{item}</Tag>)}</div></article>)}</div>
+  </div></section>;
 }

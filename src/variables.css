@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@400&family=Space+Grotesk:wght@700&display=swap");
+
+:root {
+  --color-bg: #0B0E14;
+  --color-bg-gradient: linear-gradient(135deg, #0B0E14 0%, #121A26 100%);
+  --color-surface: #1B1F23;
+  --color-border: #2A3340;
+  --color-wire: #C9D1D9;
+  --color-text: #FFFFFF;
+  --color-muted: #9AA4B2;
+  --color-accent: #70B5F9;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
